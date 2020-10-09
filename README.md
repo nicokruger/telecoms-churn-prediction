@@ -6,7 +6,7 @@ The purpose of this repo is to help you get started using the churn prediction S
 
 ## Installation
 
-The sample code provided uses [https://nodejs.org](nodejs). It can be adapted to your language of choice, as long as an [https://aws.amazon.com/tools/](AWS-SDK) is provided by AWS.
+The sample code provided uses [nodejs](https://nodejs.org). It can be adapted to your language of choice, as long as an [AWS SDK](https://aws.amazon.com/tools/) is provided by AWS.
 
 To get started, clone the project and run the following:
 
@@ -16,7 +16,17 @@ This will download and install the javascript AWS-SDK.
 
 ## Usage
 
-A script is provided, inference.js. Open the file and change the <b>endpointName</b> and <b>region</b> according to your step. Then run the following command:
+A script is provided, inference.js. Open the file and change the <b>endpointName</b> and <b>region</b> according to your deployment.
+
+  // Change your endpoint name here
+  const endpointName = '<enter your model endpoint name here>'
+
+  // Setup the region in which you deployed your Model Package here if it is not
+  // the default region for your account, uncomment the line and replace the region.
+  // AWS.config.region = 'eu-west-1';
+
+
+Then run the following command:
 
     node inference.js
 

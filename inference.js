@@ -1,6 +1,9 @@
 const mergeCommonAttributes = require('./util.js');
 const AWS = require('aws-sdk');
 
+// Change your endpoint name here
+const endpointName = '<enter your model endpoint name here>'
+
 // Setup the region in which you deployed your Model Package here if it is not
 // the default region for your account.
 // AWS.config.region = 'eu-west-1';
@@ -33,7 +36,7 @@ const userAttributes = {
 */
 async function runInference() {
   const Params = {
-    EndpointName: '<enter your model endpoint name here>',
+    EndpointName: endpointName,
     Body:mergeCommonAttributes(userAttributes),
     ContentType: 'csv',
   }
