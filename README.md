@@ -18,17 +18,18 @@ This will download and install the javascript AWS-SDK.
 
 A script is provided, inference.js. Open the file and change the <b>endpointName</b> and <b>region</b> according to your deployment.
 
-  // Change your endpoint name here
-  const endpointName = '<enter your model endpoint name here>'
+    // Change your endpoint name here
+    const endpointName = '<enter your model endpoint name here>'
 
-  // Setup the region in which you deployed your Model Package here if it is not
-  // the default region for your account, uncomment the line and replace the region.
-  // AWS.config.region = 'eu-west-1';
+    // Setup the region in which you deployed your Model Package here if it is not
+    // the default region for your account, uncomment the line and replace the region.
+    // AWS.config.region = 'eu-west-1';
 
 
 Then run the following command:
 
     node inference.js
+    churn probablity 0.5585059523582458
 
 This should run an inference against your deployed model package and return a probability to churn according to the inputted customer data.
 
