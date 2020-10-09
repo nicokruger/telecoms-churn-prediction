@@ -35,12 +35,12 @@ This should run an inference against your deployed model package and return a pr
 
 ## Attributes
 
-Inside the inference.js script, is the full list of attributes that are model expects. Also provided is a mergeCommonAttributes(...) function that you can use with a JSON object to map some common attributes to our model, and fill in the other attributes with 0's.
+Inside the <b>util.js</b> script, is the full list of attributes that are model expects. Also provided is a mergeCommonAttributes(...) function that you can use with a JSON object to map some common attributes to our model, and fill in the other attributes with 0's.
 
     mergeCommonAttributes({
       voice_oob_onnet_active_days_4w: 0,           // total # of days actively voice calling last 4 weeks
       recharge_cnt_4w: 0,                          // number of recharge events last 4 weeks
     })
 
-The full list of attributes are available in the util.js module. Only the ones you provide to the merge function will be actually used though, which could impact the accuracy of your inferences.
+Only the ones you provide to the merge function will be actually used though, which could impact the accuracy of your inferences.
 
